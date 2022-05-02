@@ -1,0 +1,9 @@
+development:
+  password: shptka_5325829b9624b58e2c04c894358de3a0
+  theme_id: '121867534433'
+  store: rumii-store.myshopify.com
+  ignore_files:
+    - config/settings_data.json
+    - /\.(txt|gif|bat)$/
+    - '*.liquid___jb_tmp___'
+    - '*.liquid___jb_old___'
