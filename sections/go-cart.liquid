@@ -1,0 +1,225 @@
+{{ 'go-cart.css' | asset_url | stylesheet_tag }}
+{% style %}
+        .go-cart-drawer .product_slider{
+            display: none;
+        }
+{% endstyle %}
+<!--go cart modal fail-->
+<div class="go-cart__modal go-cart__modal--fail js-go-cart-modal-fail">
+
+    <div class="go-cart-modal">
+
+        <!--go cart modal close-->
+        <div class="go-cart-modal__close js-go-cart-modal-fail-close">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <path d="M15.89 14.696l-4.734-4.734 4.717-4.717c.4-.4.37-1.085-.03-1.485s-1.085-.43-1.485-.03L9.641 8.447 4.97 3.776c-.4-.4-1.085-.37-1.485.03s-.43 1.085-.03 1.485l4.671 4.671-4.688 4.688c-.4.4-.37 1.085.03 1.485s1.085.43 1.485.03l4.688-4.687 4.734 4.734c.4.4 1.085.37 1.485-.03s.43-1.085.03-1.485z"></path>
+            </svg>
+
+        </div>
+        <!--end go cart modal close-->
+
+        <!--go cart modal content-->
+        <div class="go-cart-modal__content js-go-cart-modal-fail-content">
+            Something went wrong, please contact us!
+        </div>
+        <!--end go cart modal content-->
+
+    </div>
+
+</div>
+<!--end go cart modal fail-->
+
+<!--go cart modal-->
+<div class="go-cart__modal js-go-cart-modal">
+
+    <div class="go-cart-modal">
+
+        <!--go cart modal close-->
+        <div class="go-cart-modal__close js-go-cart-modal-close">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <path d="M15.89 14.696l-4.734-4.734 4.717-4.717c.4-.4.37-1.085-.03-1.485s-1.085-.43-1.485-.03L9.641 8.447 4.97 3.776c-.4-.4-1.085-.37-1.485.03s-.43 1.085-.03 1.485l4.671 4.671-4.688 4.688c-.4.4-.37 1.085.03 1.485s1.085.43 1.485.03l4.688-4.687 4.734 4.734c.4.4 1.085.37 1.485-.03s.43-1.085.03-1.485z"></path>
+            </svg>
+
+        </div>
+        <!--end go cart modal close-->
+
+        <!--go cart modal content-->
+        <div class="go-cart-modal__content js-go-cart-modal-content"></div>
+        <!--end go cart modal content-->
+
+        <!--go cart modal buttons-->
+        <div class="go-cart-modal__buttons">
+
+            <a class="go-cart__button js-go-cart-modal-close">
+                Continue shopping
+            </a>
+
+            <a href="/cart/" class="go-cart__button">
+                View cart
+            </a>
+
+        </div>
+        <!--end go cart modal buttons-->
+
+    </div>
+
+</div>
+<!--end go cart modal-->
+
+<!--go cart drawer-->
+<div class="go-cart__drawer js-go-cart-drawer">
+
+    <div class="go-cart-drawer">
+
+        <!--go cart drawer close-->
+        <div class="go-cart-drawer__header">
+            <div class="go-cart-drawer__title">
+                <span class="cart_title">{{ 'sections.cart.title' | t }}</span>
+                <span class="item_count"><span class="js-go-cart-counter">{{- cart.item_count -}}</span> Items</span>
+            </div>
+
+            <div class="go-cart-drawer__close js-go-cart-drawer-close">
+                
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 13.7285L14 1.00059" stroke="#222222" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M1 1L14 13.7279" stroke="#222222" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+    
+
+            </div>
+
+        </div>
+        <!--end go cart drawer close-->
+
+        <!--go cart drawer content-->
+        <div class="go-cart-drawer__content js-go-cart-drawer-content"></div>
+        <!--end go cart drawer content-->
+      	{% if section.settings.coll != blank %}
+        <div class="product_slider">
+            <div class="product_slider_position">
+                <div class="ps_header_wrapper">
+                    <div class="ps_head">
+                        {% if section.settings.sub_title != blank %}
+                            <p class="ps_head_sub_title">{{ section.settings.sub_title }}</p>
+                        {% endif %}
+                        <h2 class="ps_head_title">{{ section.settings.title }}</h2>
+                        {% if section.settings.label != blank %}  
+                            <a class="ps_see_all" href="{{ section.settings.url }}">
+                                {{ section.settings.label }}
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 11L6.5 6L1.5 1" stroke="#764174" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                        
+                            </a>
+                        {% endif %}
+                    </div>
+                    <div class="cart_slider_arrows">
+                        <div class="cart_slider_prev_arrow">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="16" cy="16" r="15.25" stroke="#222222" stroke-width="1.5"/>
+                                <path d="M18.0898 20.869L13.2203 15.9995L18.0898 11.1299" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                        
+                        </div>
+                        <div class="cart_slider_next_arrow">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="15.25" transform="matrix(-1 0 0 1 16 16)" stroke="#222222" stroke-width="1.5"/>
+                                <path d="M13.9102 20.869L18.7797 15.9995L13.9102 11.1299" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="cart__product_slider_container">
+                    {% for product in collections[section.settings.coll].products %}
+                        {% include 'product_card' %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+      	{% endif %}
+        <!--go cart drawer subtotal-->
+        <div class="go-cart-drawer__subtotal">
+            <span>{{ 'sections.cart.subtotal' | t }}: </span>
+            <span class="go-cart-drawer__subtotal-price js-go-cart-drawer-subtotal"></span>
+        </div>
+        <!--end go cart drawer subtotal-->
+
+        <!--go cart drawer buttons-->
+        <div class="go-cart-drawer__footer js-go-cart-drawer-footer">
+
+            <div class="go-cart-drawer__payment-buttons">
+                <a href="/checkout/" class="go-cart__button">
+                    {{ 'sections.cart.checkout' | t }}
+                    
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 15L13 10L8 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+    
+                </a>                
+            </div>
+
+            <div class="go-cart-drawer__shipping">
+                {%- comment -%}
+                
+                <span class="shipping_title">*</span>
+                <small class="small_description tax-note caption-large rte">
+                    {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                      {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                    {%- elsif cart.taxes_included -%}
+                      {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+                    {%- elsif shop.shipping_policy.body != blank -%}
+                      {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                    {%- else -%}
+                      {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+                    {%- endif -%}
+                </small>
+                {%- endcomment -%}
+            </div>
+            
+        </div>
+        <!--end go cart drawer buttons-->
+
+    </div>
+
+</div>
+<!--end go cart drawer-->
+
+<!--go cart overlay-->
+<div class="go-cart__overlay js-go-cart-overlay">
+</div>
+<!--end go cart overlay-->
+
+{% schema %}
+{
+    "name": "Ajax cart",
+    "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+    },
+    {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub title"
+    },
+    {
+        "type": "text",
+        "id": "label",
+        "label": "Button label"
+    },
+    {
+        "type": "url",
+        "id": "url",
+        "label": "Button url"
+    },
+    {
+        "type": "collection",
+        "id": "coll",
+        "label": "Collection"
+    }
+    ]
+}
+
+{% endschema %}
+

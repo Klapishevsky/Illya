@@ -1,0 +1,140 @@
+<div class="twi_blocks">
+    <div class="page-width twi_block_container">
+        <h2 class="twi_main_title">{{ section.settings.title }}</h2>
+        <p class="twi_main_info">{{ section.settings.info }}</p>
+        {% for block in section.blocks %}
+            <div class="twi_block">
+                <div class="twi_block_content">
+                    {% if block.settings.block_title != blank %}    
+                        <h3 class="twi_block_title">{{ block.settings.block_title }}</h3>
+                    {% endif %}
+                    {% if block.settings.block_info != blank %}
+                        <p class="twi_block_info">{{ block.settings.block_info }}</p>
+                    {% endif %}
+                    {% if block.settings.link_text != blank %}    
+                        <a class="twi_block_link" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+                    {% endif %}
+                </div>
+                <div class="twi_block_image_container">
+                    <img src="{{ block.settings.img | img_url: 'master' }}">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .twi_blocks{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background: #BAEEE5;
+    }
+    .twi_block_container{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
+    }
+    .twi_block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .twi_main_info{
+        max-width: 640px;
+        text-align: center;
+        margin: 0 0 40px;
+    }
+    .twi_block:nth-child(2n){
+        flex-direction: row-reverse;
+    }
+    .twi_block:last-child{
+        margin-bottom: 0;
+    }
+    .twi_block_title{
+        color: #546B67;
+    }
+    .twi_block_info{
+        color: #58B8A8;
+    }
+    .twi_block_link{
+        color: #eb9e71;
+    }
+    .twi_block_content{
+        max-width: 480px;
+    }
+    .twi_block_image_container{
+        border-radius: 10px;
+        max-width: 550px;
+        height: 380px;
+        width: 100%;
+    }
+    .twi_block_image_container img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Text with image blocks",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "textarea",
+            "id": "info",
+            "label": "Text"
+        }
+    ],
+    "blocks": [
+    {
+        "type":"select",
+            "name":"Block",
+            "settings":[
+            {
+                "type": "text",
+                "id": "block_title",
+                "label": "Title"
+            },
+            {
+                "type": "textarea",
+                "id": "block_info",
+                "label": "Text"
+            },
+            {
+                "type": "text",
+                "id": "link_text",
+                "label": "Link text"
+            },
+            {
+                "type": "url",
+                "id": "link",
+                "label": "Link"
+            },
+            {
+                "type": "image_picker",
+                "id": "img",
+                "label": "Image"
+            }
+            ]
+    }
+    ],
+    "presets": [
+        {
+            "category": "New",
+            "name":"Text with image blocks"
+        }
+    ]
+}
+{% endschema %}
