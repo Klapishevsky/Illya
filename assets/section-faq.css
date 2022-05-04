@@ -1,0 +1,144 @@
+.treatment_faq_section{
+    display: flex;
+    width: 100%;
+    background: #F4F5F0;
+    align-items: center;
+    justify-content: center;
+}
+.treatment_faq_section_position{
+    max-width: 1059px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 56px 16px 95px;
+}
+.faqs-title{
+    font-family: 'MinervaModern Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #203337;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #91928C;
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+
+.faq__answer{
+    display: none;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 180%;
+    color: #203337;
+    text-align: left;
+}
+
+
+.faq__item {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top:  1px solid #91928C;
+}
+.faq__item:first-child{
+    border-top:  0;
+}
+
+.faq__item:last-child {
+    border-bottom:  1px solid #91928C;
+
+}
+.faq__question {
+    position: relative;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #203337;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+    width: 100%;
+}
+.faq__question:first-of-type .faq__answer{
+    display: block;
+}
+
+
+.faq__question:before{
+    right: 8px;
+    width: 2px;
+    height: 18px;
+    background: #91928C;
+    content: '';
+    transition: transform 0.25s ease-out;
+    position: absolute;
+}
+.faq__question:after{
+    content: '';
+    right: 0;
+    width: 18px;
+    height: 2px;
+    background: #91928C;
+    transition: transform 0.25s ease-out;
+    position: absolute;
+    top: 48px;
+}
+.faq__question.active:before{
+    transform: rotate(90deg);
+}
+.faq__question.active:after{
+    transform: rotate(180deg);
+}
+@media screen and (max-width:768px) {
+    .treatment_faq_section_position{
+        padding: 36px 16px 56px;
+    }
+    .faqs-title{
+        font-size: 24px;
+        line-height: 130%;
+        padding-bottom: 24px;
+        margin-bottom: 0px;
+    }
+    .faq__item h3{
+        padding-top: 22px;
+        padding-bottom: 22px;
+        font-size: 16px;
+        line-height: 19px;
+        padding-right: 16px;
+    }
+    .faq__answer{
+        margin-bottom: 18px;
+        font-size: 16px;
+        margin-top: -6px;
+    }
+    .beauty-hive-faqs-wrapper{
+        margin-top: 32px;
+        margin-bottom: 56px;
+    }
+    .faq__item:first-child{
+        border-top: 0;
+    }
+    .faq__question:before{
+        font-size: 23px;
+    }
+    .faq__question.active:before{
+        font-size: 38px;
+    }
+    .treatment_faq_section{
+        margin-top: 0;
+    }
+    .faq__question:after{
+        top: 30px;
+    }
+}

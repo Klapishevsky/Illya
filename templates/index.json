@@ -8,7 +8,7 @@
           "settings": {
             "heading": "Image banner",
             "heading_size": "h0",
-            "heading_color": "#ffffff"
+            "heading_color": "#71ebd6"
           }
         },
         "button": {
@@ -41,37 +41,38 @@
         "show_text_below": false
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "1651589746b410dce6": {
+      "type": "image_with_text",
+      "settings": {
+        "title": "Some title",
+        "info": "Text about product or etc Text about product or etc Text about product or etc Text about product or etc Text about product or etc Text about product or etc Text about product or etc Text about product or etc Text about product or etc Text about product or etc Text about product or etc Text about product or etc",
+        "img": "shopify:\/\/shop_images\/hands-hold-open-a-black-plastic-envelope-on-couch.jpg"
+      }
+    },
+    "1651590768d229fa69": {
+      "type": "apps",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "615255e4-9ca0-4814-a993-9be3504fafa0": {
+          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "heading_font": "helvetica_n4",
+            "heading_size": 20,
+            "feed_width": 100,
+            "html_area": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "615255e4-9ca0-4814-a993-9be3504fafa0"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "include_margins": true
       }
     }
   },
   "order": [
     "image_banner",
-    "rich_text"
+    "1651589746b410dce6",
+    "1651590768d229fa69"
   ]
 }

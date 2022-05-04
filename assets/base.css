@@ -213,7 +213,7 @@ html.no-js .no-js-hidden {
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.6rem;
 }
 
 .page-width-desktop {
@@ -221,7 +221,7 @@ html.no-js .no-js-hidden {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 769px) {
   .page-width {
     padding: 0 5rem;
   }
@@ -2197,7 +2197,6 @@ input[type='checkbox'] {
   display: block;
   position: relative;
   background-color: rgb(var(--color-background));
-  background: transparent !important;
 }
 
 
@@ -2580,6 +2579,7 @@ details[open] > .header__submenu {
   padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  text-transform: uppercase;
 }
 
 .header__menu-item:hover {
@@ -2870,4 +2870,33 @@ details-disclosure > details {
 
 .font-body-bold {
   font-weight: var(--font-body-weight-bold);
+}
+
+/* Custom CSS */
+.main_breadcrumbs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_breadcrumbs svg{
+  margin: 0 10px;
+}
+.main_breadcrumbs a{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #566E6A;
+  text-decoration: none;
+}
+.header__icon--account {
+  width: auto;
+  margin-right: 24px;
+}
+.header__icon--account{
+  text-decoration: none;
+}
+.account_icon_name{
+  margin: 0;
+  font-size: 16px;
 }

@@ -14,6 +14,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .multicolumn {
+    background: {{ section.settings.bg_color }};
+  }
+  .title{
+    color: {{ section.settings.title_color }};
+    text-align: center;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -56,7 +63,7 @@
           {%- endif -%}
 
           <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}" {{ block.shopify_attributes }}>            
-            <div class="multicolumn-card content-container">
+            <div class="multicolumn-card content-container" style="background-color: {{ block.settings.card_bg }};">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -135,6 +142,18 @@
       "id": "title",
       "default": "Multicolumn",
       "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#FFF"
     },
     {
       "type": "select",
@@ -362,6 +381,12 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.multicolumn.blocks.column.settings.link.label"
+        },
+        {
+          "type": "color",
+          "id": "card_bg",
+          "label": "Background color",
+          "default": "#FFF"
         }
       ]
     }

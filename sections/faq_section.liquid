@@ -1,0 +1,75 @@
+{{ 'section-faq.css' | asset_url | stylesheet_tag }}
+
+
+<section class="treatment_faq_section">
+    <div class="treatment_faq_section_position">
+        <h2 class="faqs-title">{{ section.settings.title }}</h2>
+        <div class="faq-content-wrap">
+            {% for block in section.blocks %}
+                {% if block.settings.title != blank %}
+                    <div class="faq__item">
+                        <h3 class="faq__question">{{ block.settings.title }}</h3>
+                        <div class="faq__answer">{{ block.settings.answer }}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var titleTriggerFaq = $('.faq__question');
+        titleTriggerFaq.click(function (){
+            $(this).next('.faq__answer').slideToggle(250);
+            if ( $(this).hasClass('active')){
+                $(this).removeClass('active');
+            } else {
+                if ($('.faq__question ').not(this).hasClass('active')){
+                    $('.faq__question.active ').not(this).next('.faq__answer').slideToggle(250);
+                    $('.faq__question ').not(this).removeClass('active');
+                }
+                $(this).addClass('active');
+            }
+        });
+    });
+</script>
+
+
+{% schema %}
+{
+"name": "FAQs tab",
+"settings": [
+    {
+    "type": "text",
+    "id": "title",
+    "label": "Title"
+    }
+],
+"blocks": [
+    {
+        "type":"select",
+            "name":"QA",
+            "settings":[
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Question"
+            },
+            {
+                "type": "textarea",
+                "id": "answer",
+                "label": "Answer"
+            }
+            ]
+    }
+    ],
+"presets": [
+    {
+        "category": "Custom",
+        "name":"FAQs tab"
+    }
+]
+}
+{% endschema %}

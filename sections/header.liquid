@@ -80,6 +80,11 @@
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
   }
+  {% if template.name == 'index' %}
+    .header-wrapper{
+      background: transparent !important;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -392,7 +397,7 @@
      
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
-          {% render 'icon-account' %}
+          <p class="account_icon_name">PROFILE</p>
           <span class="visually-hidden">
             {%- liquid
               if customer

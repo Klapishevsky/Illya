@@ -1,0 +1,64 @@
+{
+  "sections": {
+    "main": {
+      "type": "image-banner",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "165159327000f3f76b": {
+      "type": "text_with_image_blocks",
+      "blocks": {
+        "8b967b79-4719-437d-ae0a-9cedd4db49e2": {
+          "type": "select",
+          "settings": {
+            "block_title": "Title",
+            "block_info": "Some info aboutSome info about Some info about Some info about Some info aboutSome info about Some info aboutSome info about Some info about Some info about Some info about",
+            "link_text": "Link text",
+            "link": ""
+          }
+        },
+        "5c31015e-5c6e-44f9-a21a-cdc1f67396e9": {
+          "type": "select",
+          "settings": {
+            "block_title": "Title title",
+            "block_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
+            "link_text": "Link text",
+            "link": ""
+          }
+        },
+        "ec1bd3d4-0b9a-4bc3-95ba-b912f8d8e7a3": {
+          "type": "select",
+          "settings": {
+            "block_title": "Title",
+            "block_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
+            "link_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "8b967b79-4719-437d-ae0a-9cedd4db49e2",
+        "5c31015e-5c6e-44f9-a21a-cdc1f67396e9",
+        "ec1bd3d4-0b9a-4bc3-95ba-b912f8d8e7a3"
+      ],
+      "settings": {
+        "title": "Our story",
+        "info": "some intro infosome intro info some intro infosome intro info some intro infosome intro info some intro info some intro info"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165159327000f3f76b"
+  ]
+}

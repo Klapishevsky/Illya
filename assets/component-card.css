@@ -311,3 +311,29 @@
 .card-article-info {
   margin-top: 1rem;
 }
+
+/* Custom CSS */
+
+.product-grid .card__heading{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #566E6A;
+  text-align: center;
+  text-transform: capitalize;
+}
+.product-grid .card-information .price__container{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #566E6A;
+  text-align: center;
+  text-transform: capitalize;
+}
+.price {
+  text-align: center;
+}

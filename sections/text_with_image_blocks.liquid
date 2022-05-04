@@ -1,7 +1,5 @@
 <div class="twi_blocks">
     <div class="page-width twi_block_container">
-        <h2 class="twi_main_title">{{ section.settings.title }}</h2>
-        <p class="twi_main_info">{{ section.settings.info }}</p>
         {% for block in section.blocks %}
             <div class="twi_block">
                 <div class="twi_block_content">
@@ -29,7 +27,7 @@
         width: 100%;
         align-items: center;
         justify-content: center;
-        background: #BAEEE5;
+        background: linear-gradient(180deg, rgb(186 237 229) 0%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
     }
     .twi_block_container{
         display: flex;
@@ -37,19 +35,29 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 5rem;
+        padding: 10rem 5rem;
     }
     .twi_block{
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 80px;
+    }
+    .twi_main_title{
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 150%;
+        text-align: center;
+        color: #566E6A;
     }
     .twi_main_info{
         max-width: 640px;
         text-align: center;
         margin: 0 0 40px;
+        font-weight: 400;
+        color: #566E6A;
     }
     .twi_block:nth-child(2n){
         flex-direction: row-reverse;
@@ -59,26 +67,85 @@
     }
     .twi_block_title{
         color: #546B67;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 130%;
     }
     .twi_block_info{
         color: #58B8A8;
     }
     .twi_block_link{
         color: #eb9e71;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        border-bottom: 2px solid #eb9e71;
+        line-height: 150%;
+        position: relative;
+    }
+    .twi_block_link::after{
+        background: none repeat scroll 0 0 transparent;
+        bottom: -2px;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        background: #eb9e71;
+        transition: width 0.5s ease 0s, left 0.5s ease 0s;
+        width: 0;
+    }
+    .twi_block_link:hover{
+        border-bottom: 2px solid transparent;
+    }
+    .twi_block_link:hover::after{
+        width: 100%; 
+        left: 0; 
     }
     .twi_block_content{
         max-width: 480px;
+        width: 100%;
+    }
+    .twi_block:nth-child(2n) .twi_block_image_container{
+        margin-left: 0px;
+        margin-right: 20px;
     }
     .twi_block_image_container{
-        border-radius: 10px;
         max-width: 550px;
         height: 380px;
         width: 100%;
+        margin-left: 20px;
     }
     .twi_block_image_container img{
         width: 100%;
         object-fit: cover;
         height: 100%;
+        border-radius: 10px;
+    }
+    @media screen and (max-width:768px) {
+        .twi_block_container{
+            padding: 4rem 1.6rem;
+        }
+        .twi_block{
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+        .twi_block:nth-child(2n){
+            flex-direction: column;
+        }
+        .twi_block:nth-child(2n) .twi_block_image_container{
+            margin-right: 0px;
+            margin-top: 20px;
+        }
+        .twi_block_image_container{
+            margin-left: 0;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+        .twi_block_content{
+            max-width: 100%;
+        }
     }
 </style>
 
@@ -86,16 +153,7 @@
 {
     "name": "Text with image blocks",
     "settings": [
-        {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-        },
-        {
-            "type": "textarea",
-            "id": "info",
-            "label": "Text"
-        }
+       
     ],
     "blocks": [
     {

@@ -1,0 +1,68 @@
+<div class="top_section">
+    <div class="top_section_position page-width">
+        <div class="main_breadcrumbs">
+            <a href="{{ shop.url }}">Home</a>
+            {% include 'breadcrumbs_arrow' %}
+            <a href="{{ page.url }}">{{ page.title }}</a>
+        </div>
+        <h2 class="top_title">{{ section.settings.title }}</h2>
+    </div>
+</div>
+
+<style>
+.top_section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #BAEEE5;
+}
+.top_section_position{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+.top_title{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    text-transform: capitalize;
+    color: #566E6A;
+    margin: 24px 0 0;
+}
+@media screen and (max-width:768px) {
+    .main_breadcrumbs{
+        display: none;
+    }
+    .top_section_position{
+        padding: 34px 16px;
+    }
+    .top_title{
+        margin: 0;
+    }
+}
+</style>
+
+{% schema %}
+{
+    "name": "Top section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        }
+    ],
+    "presets": [
+        {
+            "category": "New",
+            "name":"Top section"
+        }
+    ]
+}
+{% endschema %}
