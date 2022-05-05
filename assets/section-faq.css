@@ -1,40 +1,39 @@
 .treatment_faq_section{
     display: flex;
     width: 100%;
-    background: #F4F5F0;
     align-items: center;
     justify-content: center;
 }
 .treatment_faq_section_position{
-    max-width: 1059px;
+    max-width: 890px;
     margin: 0 auto;
     width: 100%;
     padding: 56px 16px 95px;
 }
 .faqs-title{
-    font-family: 'MinervaModern Regular';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 38px;
     color: #203337;
     padding-bottom: 50px;
-    border-bottom: 1px solid #91928C;
+    border-bottom: 1px solid #485C58;
     margin-bottom: 0px;
     margin-top: 0;
 }
 
 .faq__answer{
-    display: none;
-    margin-top: -20px;
+    margin-top: -30px;
     margin-bottom: 30px;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 180%;
     color: #203337;
     text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 
@@ -44,14 +43,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-top:  1px solid #91928C;
+    border-top:  1px solid #485C58;
 }
 .faq__item:first-child{
     border-top:  0;
 }
 
 .faq__item:last-child {
-    border-bottom:  1px solid #91928C;
+    border-bottom:  1px solid #485C58;
 
 }
 .faq__question {
@@ -79,7 +78,7 @@
     right: 8px;
     width: 2px;
     height: 18px;
-    background: #91928C;
+    background: #485C58;
     content: '';
     transition: transform 0.25s ease-out;
     position: absolute;
@@ -89,7 +88,7 @@
     right: 0;
     width: 18px;
     height: 2px;
-    background: #91928C;
+    background: #485C58;
     transition: transform 0.25s ease-out;
     position: absolute;
     top: 48px;

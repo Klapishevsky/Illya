@@ -1,18 +1,9 @@
 {
   "sections": {
-    "main": {
-      "type": "image-banner",
+    "1651652792eee112f9": {
+      "type": "top_section",
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "title": "Our Story"
       }
     },
     "165159327000f3f76b": {
@@ -24,7 +15,8 @@
             "block_title": "Title",
             "block_info": "Some info aboutSome info about Some info about Some info about Some info aboutSome info about Some info aboutSome info about Some info about Some info about Some info about",
             "link_text": "Link text",
-            "link": ""
+            "link": "",
+            "img": "shopify:\/\/shop_images\/gift-bag-with-bow.jpg"
           }
         },
         "5c31015e-5c6e-44f9-a21a-cdc1f67396e9": {
@@ -33,7 +25,8 @@
             "block_title": "Title title",
             "block_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
             "link_text": "Link text",
-            "link": ""
+            "link": "",
+            "img": "shopify:\/\/shop_images\/black-bag-lays-with-items-for-school-falling-out-of-it.jpg"
           }
         },
         "ec1bd3d4-0b9a-4bc3-95ba-b912f8d8e7a3": {
@@ -42,7 +35,8 @@
             "block_title": "Title",
             "block_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
             "link_text": "",
-            "link": ""
+            "link": "",
+            "img": "shopify:\/\/shop_images\/hands-hold-open-a-black-plastic-envelope-on-couch.jpg"
           }
         }
       },
@@ -51,14 +45,11 @@
         "5c31015e-5c6e-44f9-a21a-cdc1f67396e9",
         "ec1bd3d4-0b9a-4bc3-95ba-b912f8d8e7a3"
       ],
-      "settings": {
-        "title": "Our story",
-        "info": "some intro infosome intro info some intro infosome intro info some intro infosome intro info some intro info some intro info"
-      }
+      "settings": {}
     }
   },
   "order": [
-    "main",
+    "1651652792eee112f9",
     "165159327000f3f76b"
   ]
 }

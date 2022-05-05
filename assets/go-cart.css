@@ -15,6 +15,12 @@
     display: flex;
     align-items: center;
 }
+.go-cart-item__image{
+    display: block !important;
+}
+.go-cart-item__remove{
+    cursor: pointer !important;
+}
 .go-cart__trigger:hover{
     color: #71EBD6;
 }

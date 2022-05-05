@@ -20,20 +20,22 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var titleTriggerFaq = $('.faq__question');
-        titleTriggerFaq.click(function (){
-            $(this).next('.faq__answer').slideToggle(250);
-            if ( $(this).hasClass('active')){
-                $(this).removeClass('active');
-            } else {
-                if ($('.faq__question ').not(this).hasClass('active')){
-                    $('.faq__question.active ').not(this).next('.faq__answer').slideToggle(250);
-                    $('.faq__question ').not(this).removeClass('active');
-                }
-                $(this).addClass('active');
-            }
+        var acc = document.getElementsByClassName("faq__question");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
         });
-    });
+        }
+    })
+
 </script>
 
 

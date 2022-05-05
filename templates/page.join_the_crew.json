@@ -1,0 +1,153 @@
+{
+  "sections": {
+    "main": {
+      "type": "image-banner",
+      "blocks": {
+        "ddf43207-2551-4760-b12f-9e73614b342d": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1",
+            "heading_color": "#ffffff"
+          }
+        },
+        "bb614c16-c656-49f1-8d78-2b2d557e30b0": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "34cf0cb6-5ebb-4404-b57d-3a006864da2d": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Sign Up",
+            "button_link_1": "https:\/\/rumii-store.myshopify.com\/account\/register",
+            "button_style_secondary_1": false,
+            "button_label_2": "Log in",
+            "button_link_2": "https:\/\/rumii-store.myshopify.com\/account\/login",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "ddf43207-2551-4760-b12f-9e73614b342d",
+        "bb614c16-c656-49f1-8d78-2b2d557e30b0",
+        "34cf0cb6-5ebb-4404-b57d-3a006864da2d"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/black-bag-lays-with-items-for-school-falling-out-of-it.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "165167383677f6b7f7": {
+      "type": "multicolumn",
+      "blocks": {
+        "16516738360686bee2-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gift-bag-with-bow.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "card_bg": "#bbf0e7"
+          }
+        },
+        "16516738360686bee2-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/modern-blue-handbag.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "card_bg": "#bbf0e7"
+          }
+        },
+        "16516738360686bee2-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/black-bag-lays-with-items-for-school-falling-out-of-it.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "card_bg": "#bbf0e7"
+          }
+        }
+      },
+      "block_order": [
+        "16516738360686bee2-0",
+        "16516738360686bee2-1",
+        "16516738360686bee2-2"
+      ],
+      "settings": {
+        "title": "Explanation",
+        "title_color": "#3b4947",
+        "bg_color": "#59baaa",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "16516771203c7142af": {
+      "type": "faq_section",
+      "blocks": {
+        "11c0d669-962e-40be-94fa-17c1bbaa8512": {
+          "type": "select",
+          "settings": {
+            "title": "Question",
+            "answer": "Answer"
+          }
+        },
+        "40ec9017-9f39-4af0-ac43-f1fed93d69cf": {
+          "type": "select",
+          "settings": {
+            "title": "Question",
+            "answer": "Answer"
+          }
+        },
+        "4b7f6f46-9f57-4b24-bb27-ada7a9e37e88": {
+          "type": "select",
+          "settings": {
+            "title": "Question",
+            "answer": "Answer"
+          }
+        }
+      },
+      "block_order": [
+        "11c0d669-962e-40be-94fa-17c1bbaa8512",
+        "40ec9017-9f39-4af0-ac43-f1fed93d69cf",
+        "4b7f6f46-9f57-4b24-bb27-ada7a9e37e88"
+      ],
+      "settings": {
+        "title": "FREQUENTLY ASKED QUESTIONS"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165167383677f6b7f7",
+    "16516771203c7142af"
+  ]
+}

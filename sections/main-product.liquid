@@ -417,9 +417,9 @@
                   </svg>
                   <span class="product-form__error-message"></span>
                 </div>
-
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+                  <input class="inventory_quantity" type="hidden" value="{{ product.selected_or_first_available_variant.inventory_quantity}}">
                   <div class="product-form__buttons">
                     <button
                       type="submit"
@@ -623,6 +623,19 @@
     }
   </script>
 </section>
+
+<script>
+  let maxValue = document.querySelector('.inventory_quantity').value
+  document.querySelector('.quantity__input').addEventListener('change',function(){
+    if (parseInt(this.value) > parseInt(maxValue)) {
+      document.querySelector('.product-form__submit').classList.remove('js-go-cart-add-to-cart')
+    }else{
+      document.querySelector('.product-form__submit').classList.add('js-go-cart-add-to-cart')
+    }
+    
+  })
+</script>
+
 
 {% schema %}
 {
